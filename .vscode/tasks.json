@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "debug",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"command": "cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j48"
+		},
+		{
+			"type": "shell",
+			"label": "relwithdeb",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"command": "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo .. && make -j48"
+		},
+	]
+}
